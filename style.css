@@ -1,0 +1,306 @@
+/* Sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(26,61,47,0.08);
+}
+
+/* Section divider */
+.section-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 32px auto;
+  font-size: 1.5rem;
+  color: #b6f5c3;
+}
+.section-divider i {
+  color: #b6f5c3;
+  filter: drop-shadow(0 1px 2px #1a3d2f22);
+}
+
+/* Footer */
+.site-footer {
+  background: #1a3d2f;
+  color: #fff;
+  padding: 32px 0 16px 0;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+.site-footer nav a {
+  color: #b6f5c3;
+  margin: 0 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.site-footer nav a:hover {
+  color: #fff;
+}
+.site-footer a[aria-label="Privacy Policy"] {
+  color: #b6f5c3;
+  text-decoration: underline;
+}
+
+/* Back to top button */
+#backToTop {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #b6f5c3;
+  color: #1a3d2f;
+  border: 2px solid #1a3d2f;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26,61,47,0.08);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #1a3d2f;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+header.main-section {
+  background: linear-gradient(135deg, #1a3d2f 70%, #b6f5c3 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 0 40px 0;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(26,61,47,0.08);
+}
+
+.sena-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+header.main-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #e0f2e9;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #b6f5c3;
+  color: #1a3d2f;
+  border: 2px solid #1a3d2f;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(26,61,47,0.08);
+}
+
+.cta-btn:hover {
+  background: #1a3d2f;
+  color: #b6f5c3;
+  box-shadow: 0 4px 16px rgba(26,61,47,0.15);
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.section-divider {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #b6f5c3 0%, #1a3d2f 100%);
+  border-radius: 2px;
+  margin: 24px auto 32px auto;
+}
+
+h2 {
+  color: #1a3d2f;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about-section, .services-section, .accreditations-section, .contact-section {
+  background: #f7faf9;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(26,61,47,0.04);
+}
+
+.about-section p {
+  margin-bottom: 10px;
+}
+
+.services-list {
+  list-style: none;
+  margin-bottom: 15px;
+  color: #1a3d2f;
+  padding: 0;
+}
+.services-list li {
+  margin-bottom: 12px;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #eafcf0;
+  border-left: 5px solid #b6f5c3;
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.services-list li i {
+  color: #1a3d2f;
+  font-size: 1.2em;
+  min-width: 22px;
+}
+.services-list li:hover {
+  background: #b6f5c3;
+  border-left: 5px solid #1a3d2f;
+  box-shadow: 0 2px 12px rgba(26,61,47,0.10);
+}
+
+.accreditations-section {
+  text-align: center;
+}
+.accreditation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.cima-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 8px;
+}
+.large-cima-logo {
+  width: 180px;
+  max-width: 90vw;
+}
+
+.contact-section {
+  text-align: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 18px auto;
+  max-width: 400px;
+}
+.contact-form label {
+  align-self: flex-start;
+  font-weight: 500;
+  color: #1a3d2f;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b2c8bc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  color: #1a3d2f;
+}
+.contact-form button {
+  background: #b6f5c3;
+  color: #1a3d2f;
+  border: 2px solid #1a3d2f;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(26,61,47,0.08);
+}
+.contact-form button:hover {
+  background: #1a3d2f;
+  color: #b6f5c3;
+  box-shadow: 0 4px 16px rgba(26,61,47,0.15);
+}
+.alt-contact {
+  margin-top: 10px;
+  color: #1a3d2f;
+}
+.alt-contact a {
+  color: #1a3d2f;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 0;
+  }
+  header.main-section {
+    padding: 40px 0 20px 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .cima-logo, .large-cima-logo {
+    width: 100px;
+    max-width: 70vw;
+  }
+  .sena-logo {
+    width: 50px;
+  }
+  .services-list li {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}

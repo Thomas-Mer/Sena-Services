@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sena Services Ltd. - Professional accounting and financial support for businesses. Bookkeeping, VAT, payroll, management accounts, and more.">
+    <title>Sena Services Ltd.</title>
+    <link rel="preload" as="image" href="sena-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Main Section -->
+    <header class="main-section sticky-header" role="banner">
+        <div class="container">
+            <img src="sena-logo.png" alt="Sena Services Ltd. Logo" class="sena-logo" loading="lazy">
+            <h1>Sena Services Ltd.</h1>
+            <p class="tagline">Helping You Stay on Top of the Numbers, Whatever Your Industry.</p>
+            <a href="#contact" class="cta-btn" aria-label="Contact Sena Services">Get in Touch</a>
+        </div>
+    </header>
+
+    <div class="section-divider" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Sena Services Ltd., we provide practical financial support tailored to your business. Whether you're running a building firm, managing a family office, or simply looking for help staying compliant, we focus on delivering trustworthy, responsive, and personalised service.</p>
+            <p>We understand that every business is different — and our aim is to make your numbers simpler, cleaner, and easier to manage.</p>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul class="services-list">
+                <li><i class="fa-solid fa-book"></i> Bookkeeping & day-to-day transaction support</li>
+                <li><i class="fa-solid fa-file-invoice-dollar"></i> VAT returns and Making Tax Digital compliance</li>
+                <li><i class="fa-solid fa-users"></i> Payroll setup and processing</li>
+                <li><i class="fa-solid fa-chart-line"></i> Management accounts</li>
+                <li><i class="fa-solid fa-user-check"></i> Self-assessment and year-end preparation</li>
+                <li><i class="fa-solid fa-file-alt"></i> General financial admin and reporting</li>
+            </ul>
+            <p>We can tailor our approach to fit the size, sector, and systems of your business.</p>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+    <!-- Accreditations / Trust Section -->
+    <section class="accreditations-section" id="accreditations">
+        <div class="container">
+            <h2>Accreditations</h2>
+            <div class="accreditation">
+                <img src="https://achieverslive.com/wp-content/uploads/2022/09/cima-logo.png" alt="CIMA Logo" class="cima-logo large-cima-logo">
+                <p>Chartered Institute of Management Accountants</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><i class="fa-solid fa-leaf"></i></div>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2>Let’s Talk</h2>
+            <p>We’d love to hear about your business and how we can support you. Get in touch using the form below, and we’ll get back to you shortly.</p>
+            <form class="contact-form" action="https://formspree.io/f/mnqewqzv" method="POST" aria-label="Contact form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+                <button type="submit" aria-label="Send message">Send</button>
+            </form>
+            <p class="alt-contact">Alternatively, you can reach us at: <a href="mailto:info@senaservices.co.uk">info@senaservices.co.uk</a></p>
+        </div>
+    </section>
+
+    <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <nav aria-label="Footer navigation">
+          <a href="#about">About</a> |
+          <a href="#services">Services</a> |
+          <a href="#accreditations">Accreditations</a> |
+          <a href="#contact">Contact</a>
+        </nav>
+        <p>&copy; <span id="year"></span> Sena Services Ltd. All rights reserved. <a href="#" aria-label="Privacy Policy">Privacy Policy</a></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
